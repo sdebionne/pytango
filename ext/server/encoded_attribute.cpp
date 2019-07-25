@@ -1199,7 +1199,7 @@ void export_encoded_attribute()
         init<>());
     
     EncodedAttribute
-        .def(init<int, optional<bool> >())
+        .def(init<int, boost::python::optional<bool> >())
         .def("_encode_gray8", &PyEncodedAttribute::encode_gray8)
         .def("_encode_gray16", &PyEncodedAttribute::encode_gray16)
         .def("_encode_rgb24", &PyEncodedAttribute::encode_rgb24)

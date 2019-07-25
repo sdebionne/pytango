@@ -1473,7 +1473,7 @@ void export_device_impl()
     
     class_<Tango::DeviceImpl, auto_ptr<DeviceImplWrap>, boost::noncopyable>("DeviceImpl",
         init<CppDeviceClass *, const char *,
-             optional<const char *, Tango::DevState, const char *> >())
+             boost::python::optional<const char *, Tango::DevState, const char *> >())
 
         .def("init_device", pure_virtual(&Tango::DeviceImpl::init_device))
         .def("set_state", &Tango::DeviceImpl::set_state)
@@ -1718,7 +1718,7 @@ void export_device_impl()
            boost::noncopyable>
            ("Device_2Impl",
             init<CppDeviceClass *, const char *,
-                 optional<const char *, Tango::DevState, const char *> >())
+                 boost::python::optional<const char *, Tango::DevState, const char *> >())
         .def("get_attribute_config_2", &PyDevice_2Impl::get_attribute_config_2)
         //@TODO .def("read_attribute_history_2", &PyDevice_2Impl::read_attribute_history_2)
     ;
@@ -1728,7 +1728,7 @@ void export_device_impl()
            boost::noncopyable>
            ("Device_3Impl",
             init<CppDeviceClass *, const char *,
-                 optional<const char *, Tango::DevState, const char *> >())
+                 boost::python::optional<const char *, Tango::DevState, const char *> >())
         .def("init_device", pure_virtual(&Tango::Device_3Impl::init_device))
         .def("delete_device", &Tango::Device_3Impl::delete_device,
             &Device_3ImplWrap::default_delete_device)
@@ -1753,7 +1753,7 @@ void export_device_impl()
            boost::noncopyable>
            ("Device_4Impl",
             init<CppDeviceClass *, const char *,
-                 optional<const char *, Tango::DevState, const char *> >())
+                 boost::python::optional<const char *, Tango::DevState, const char *> >())
         .def("init_device", pure_virtual(&Tango::Device_4Impl::init_device))
         .def("delete_device", &Tango::Device_4Impl::delete_device,
             &Device_4ImplWrap::default_delete_device)
@@ -1777,7 +1777,7 @@ void export_device_impl()
            boost::noncopyable>
            ("Device_5Impl",
             init<CppDeviceClass *, const char *,
-                 optional<const char *, Tango::DevState, const char *> >())
+                 boost::python::optional<const char *, Tango::DevState, const char *> >())
         .def("init_device", pure_virtual(&Tango::Device_5Impl::init_device))
         .def("delete_device", &Tango::Device_5Impl::delete_device,
             &Device_5ImplWrap::default_delete_device)
@@ -1812,7 +1812,7 @@ void export_device_impl()
 //{
 //    class_<Tango::DeviceIntrThread, boost::noncopyable>("DeviceImpl",
 //        init<CppDeviceClass *, const char *,
-//             optional<const char *, Tango::DevState, const char *> >())
+//             boost::python::optional<const char *, Tango::DevState, const char *> >())
 //
 //    .def("push_event",
 //        (void (*) (Tango::DevIntrThread &))

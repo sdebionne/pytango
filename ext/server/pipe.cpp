@@ -431,8 +431,8 @@ namespace PyTango { namespace Pipe {
 void export_pipe()
 {
     bopy::class_<Tango::Pipe, boost::noncopyable>("Pipe",
-        bopy::init<const std::string &, 
-		   const Tango::DispLevel, 
+        bopy::init<const std::string &,
+                   const Tango::DispLevel,
                    bopy::optional<Tango::PipeWriteType> >())
 
         .def("get_name", &Tango::Pipe::get_name,

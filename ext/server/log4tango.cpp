@@ -85,7 +85,7 @@ void export_log4tango()
     }
 
     class_<log4tango::Logger, boost::noncopyable>("Logger",
-        init<const std::string &, optional<log4tango::Level::Value> >())
+        init<const std::string &, boost::python::optional<log4tango::Level::Value> >())
 
         .def("get_name", &log4tango::Logger::get_name,
             return_value_policy<copy_const_reference>())

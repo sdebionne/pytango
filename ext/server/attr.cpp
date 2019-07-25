@@ -170,7 +170,7 @@ void PyAttr::set_user_prop(vector<Tango::AttrProperty> &user_prop,
 void export_attr()
 {
     class_<Tango::Attr, boost::noncopyable>("Attr",
-        init<const char *, long, optional<Tango::AttrWriteType, const char *> >())
+        init<const char *, long, boost::python::optional<Tango::AttrWriteType, const char *> >())
 
         .def("set_default_properties", &Tango::Attr::set_default_properties)
         .def("set_disp_level", &Tango::Attr::set_disp_level)
