@@ -9,7 +9,7 @@
   See LICENSE.txt for more info.
 ******************************************************************************/
 
-#include "precompiled_header.hpp"
+
 #include "from_py.h"
 #include "pyutils.h"
 

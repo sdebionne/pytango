@@ -9,7 +9,7 @@
   See LICENSE.txt for more info.
 ******************************************************************************/
 
-#include "precompiled_header.hpp"
+
 
 #if BOOST_VERSION < 103400
 #define DISABLE_BOOST_DOCSTRING_OPTIONS

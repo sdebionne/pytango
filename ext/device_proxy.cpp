@@ -9,7 +9,7 @@
   See LICENSE.txt for more info.
 ******************************************************************************/
 
-#include "precompiled_header.hpp"
+
 #include "device_attribute.h"
 #include "device_pipe.h"
 #include "callback.h"

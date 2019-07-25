@@ -9,7 +9,7 @@
   See LICENSE.txt for more info.
 ******************************************************************************/
 
-#include "precompiled_header.hpp"
+
 #include <tango.h>
 
 void export_user_default_fwdattr_prop()

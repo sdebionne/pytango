@@ -9,7 +9,7 @@
   See LICENSE.txt for more info.
 ******************************************************************************/
 
-#include "precompiled_header.hpp"
+
 #include "exception.h"
 #include "pytgutils.h"
 #include "fast_from_py.h"

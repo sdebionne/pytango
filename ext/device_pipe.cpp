@@ -9,7 +9,7 @@
   See LICENSE.txt for more info.
 ******************************************************************************/
 
-#include "precompiled_header.hpp"
+
 #include "device_pipe.h"
 #include "tgutils.h"
 #include "pytgutils.h"
