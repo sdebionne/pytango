@@ -70,10 +70,8 @@ src = [
 
 pch_dir = include_directories('pch')
 
-pylib = py.extension_module('tango', src,  
+pylib = py.extension_module('_tango', src,  
   cpp_pch : 'pch/precompiled_header.hpp',
   include_directories: pch_dir,
   dependencies : [py_dep, numpy_dep, boost_dep, tango_dep],
 )
-
-pypathdir = meson.current_build_dir()

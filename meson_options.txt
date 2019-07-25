@@ -1,0 +1,1 @@
+option('tango_root', type : 'string', value : 'optval', description : 'Root folder of tango')

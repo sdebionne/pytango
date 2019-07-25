@@ -7,7 +7,7 @@ project('tango', 'cpp',
 py = import('python').find_installation('python3', modules : ['numpy'])
 
 py_dep = py.dependency()
-boost_dep = dependency('boost', modules : ['python'])
+boost_dep = dependency('boost', modules : ['python37'])
 tango_dep = dependency('tango')
 
 numpy_inc = include_directories(py.get_path('purelib') + '/numpy/core/include')
@@ -16,15 +16,7 @@ numpy_dep = declare_dependency(
 
 if py_dep.found()
   subdir('ext')
-
-  # test('extmod',
-  #   py,
-  #   args : files('blaster.py'),
-  #   env : ['PYTHONPATH=' + pypathdir])
-
-  # Check we can apply a version constraint
-  #dependency('python3', modules: 'numpy', version: '>=@0@'.format(py_dep.version()))
-
+  subdir('tests')
 else
   error('MESON_SKIP_TEST: Python3 libraries not found, skipping test.')
 endif
